@@ -10,7 +10,7 @@
 
 ### Операции с целыми и вещественными числами
 
-![img](.\img\l1.10_operations.png)
+![img](./img/l1.10_operations.png)
 
 ### Целые числа
 
@@ -125,4 +125,4 @@ True
 
 ### Приоритет арифметических операций в Python
 
-![img](.\img\l1.10_operations_priority.png)
+![img](./img/l1.10_operations_priority.png)
