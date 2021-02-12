@@ -14,7 +14,7 @@
 - [Знакомство с Jupyter Notebook](./lesson1/lesson1.6.md)
 - [Знакомство с Google Colaboratory](./lesson1/lesson1.7.md)
 - [О языке разметки Markdown](./lesson1/lesson1.8.md)
-- [Типы объектов языка Python](./lesson1/lesson1.9.md)
+- [Переменные и типы данных языка Python](./lesson1/lesson1.9.md)
 - [Числа и основные арифметические операции](./lesson1/lesson1.10.md)
 - [Работа со строками](./lesson1/lesson1.11.md)
 - [Логические тип данных. Логические операторы. Операторы ветвления](./lesson1/lesson1.12.md)
