@@ -1,1 +1,0 @@
-## Знакомство с Jupyter Notebook
