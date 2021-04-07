@@ -10,11 +10,9 @@
 - [О языке программирования Python](./lesson1/lesson1.2.md)
 - [Варианты разработки программ](./lesson1/lesson1.3.md)
 - [Знакомство с Google Colaboratory](./lesson1/lesson1.4.md)
-- [О языке разметки Markdown](./lesson1/lesson1.5.md)
 - [Структура программы на языке Python](./lesson1/lesson1.6.md)
 - [Переменные и типы данных](./lesson1/lesson1.7.md)
 - [Числа и основные арифметические операции](./lesson1/lesson1.8.md)
-- [Базовый ввод/вывод информации](./lesson1/lesson1.9.md)
 - [Практика решения простейших задач](./lesson1/lesson1_tasks.ipynb)
 - [Полезные ссылки](./lesson1/lesson1.10.md)
 
@@ -29,10 +27,12 @@
 
 ### Занятие 4. Циклические вычисления
 
+- [Организация циклических вычислений](./lesson4/lesson4.1.md)
 - [Практика решения простейших задач](./lesson4/lesson4_tasks.ipynb)
 
 ### Занятие 5. Построение графиков и диаграмм
 
+- [Примеры работы с библиотекой matplotlib](https://matplotlib.org/stable/gallery/index.html)
 - [Практика решения простейших задач](./lesson5/lesson5_tasks.ipynb)
 
 ### Занятие 6. Итоговое занятие

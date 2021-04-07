@@ -142,4 +142,3 @@ print(Fraction(7, 71) * 71 == 7)
 
 ![img](./img/l1.8_operations_priority.png)
 
-### Ассоциативность арифметических операций в Python

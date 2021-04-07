@@ -12,15 +12,7 @@
 
 ![img](./img/l2.6_while_cycle.png)
 
-```
-# Python 2 and 3 compatibility
-# pip install future
-from __future__ import (absolute_import, division,
-                        print_function, unicode_literals)
-from builtins import *
-```
-
-```
+```python
 # Некоторое начальное условие
 game_active = True
 
@@ -47,7 +39,7 @@ while game_active:
 
 В примере игра, которая продолжается до тех пор, пока у игрока есть силы
 
-```
+```python
 # Установим силы игрока - 5.
 power = 5
 
@@ -66,7 +58,7 @@ else:
 
 В Python 3 Вы всегда используете `input()`, и метод возвращает строку. В Python 2.7 `input()` - для ввода чисел, а для строк используйте `raw_input()`:
 
-```
+```python
 # Список содержит несколько имен
 names = ['guido', 'tim', 'jesse']
 
@@ -86,7 +78,7 @@ print(names)
 
 Большинство программ работают до тех пор, пока вы не завершите работу, введя quit, exit ...etc. Рассмотрим пример организации цикла для подобного рода поведения:
 
-```
+```python
 # Создадим список
 names = []
 
@@ -107,7 +99,7 @@ print(names)
 
 Все хорошо, но! - 'quit' добавилось в лист. Давайте добавим `if` чтобы убрать этот баг:
 
-```
+```python
 #Ничего нового
 names = []
 
@@ -126,7 +118,7 @@ print(names)
 
 # Использование цикла while для создания меню
 
-```
+```python
 # Give the user some context.
 print("\nWelcome to the nature center. What would you like to do?")
 
@@ -162,7 +154,7 @@ print("Thanks again, bye now.")
 
 Ещё одно меню, но немного симпатичного кода
 
-```
+```python
 # Define the actions for each choice we want to offer.
 def ride_bicycle():
     print("\nHere's a bicycle. Have fun!\n")
@@ -210,7 +202,7 @@ print("Thanks again, bye now.")
 
 Мы можем достать элемент списка при помощи `pop()`. Цикл позволят нам пройти по элементам списка и применить к ним какие-то методы. Рассмотрим пример с обработкой неподтвержденных пользователей.
 
-```
+```python
 # Создадим два списка
 unconfirmed_users = ['ada', 'billy', 'clarence', 'daria']
 confirmed_users = []
@@ -237,7 +229,7 @@ for user in confirmed_users:
 
 Все прекрасно, но давайте сделаем небольшое улучшение. Сейчас мы обрабатываем только новых пользователей. Если пользователи появляются быстрее чем мы их обрабатываем, мы пропустим кучу народу, поэтому надо организовать взаимодействие вида 'первый пришел, первый вышел' (FIFO), поэтому каждый раз мы будет выбирать первого.
 
-```
+```python
 # Start with a list of unconfirmed users, and an empty list of confirmed users.
 unconfirmed_users = ['ada', 'billy', 'clarence', 'daria']
 confirmed_users = []
@@ -270,13 +262,15 @@ for user in confirmed_users:
 
 Давайте посмотрим пример:
 
-```
+```python
 current_number = 1
 
 # Count up to 5, printing the number each time.
 while current_number <= 5:
     print(current_number)
 ```
+
+Вывод:
 
 ```
 1
@@ -293,9 +287,7 @@ while current_number <= 5:
 
 Цикл бесконечный потому, что условие всегда выполняется. Для корректной работы необходимо в тело цикла добавить операцию инкремента переменной, значение которой проверяется в условии:
 
-In [ ]:
-
-```
+```python
 current_number = 1
 
 # Count up to 5, printing the number each time.
@@ -308,7 +300,7 @@ while current_number <= 5:
 
 Ещё пара плохих примеров:
 
-```
+```python
 current_number = 1
 
 # Считаем до 5, печатая номер каждый раз.
@@ -316,6 +308,8 @@ while current_number <= 5:
     print(current_number)
     current_number = current_number - 1
 ```
+
+Вывод:
 
 ```
 1
@@ -340,32 +334,30 @@ while current_number <= 5:
 
 Как это выглядит:
 
-while
-
-```
-<statements1>
-
-if <test2>: break # Выйти из цикла, пропустив часть else
-
-if <test3>: continue # Перейти в начало цикла, к выражению test1
-```
-
+```python
+while True:
+    <statements1>
+    if <test2>: break # Выйти из цикла, пропустив часть else
+    if <test3>: continue # Перейти в начало цикла, к выражению test1
 else:
-
-```
-<statements2> # Выполняется, если не была использована инструкция ‘break’
+    <statements2> # Выполняется, если не была использована инструкция ‘break’
 ```
 
 Инструкции **break** и **continue** могут появляться в любом месте внутри тела цикла **while** (или *for*), но, как правило, они используются в условных инструкциях **if**, чтобы выполнить необходимое действие в ответ на некоторое условие.
 
 ## Использование Continue
 
-```
+```python
 x = 10
 while x:
     x = x - 1 # Или, x -= 1
     if x % 2 != 0: continue # Нечетное? – пропустить вывод
     print(x)
+```
+
+Вывод:
+
+```
 8
 6
 4
@@ -373,14 +365,21 @@ while x:
 0
 ```
 
+
+
 ## Использование Break
 
-```
+```python
 while 1:
     name = input('Enter name:')
     if name == 'stop': break
     age = input('Enter age: ')
     print('Hello', name, '=>', int(age) ** 2)
+````
+
+Вывод:
+
+```
 Enter name:Yury
 Enter age: stop
 ---------------------------------------------------------------------------
@@ -395,9 +394,9 @@ ValueError: invalid literal for int() with base 10: 'stop'
 
 ## Использование Else
 
-Пример на проверку, простое ли число y
+Пример на проверку, простое ли число `y`
 
-```
+```python
 x, y = 4, 23
 x = y // 2 # Для значений y > 1
 while x > 1:
@@ -408,6 +407,11 @@ while x > 1:
         x -= 1
 else: # Нормальное завершение цикла
     print(y, 'is prime')
+```
+
+Вывод:
+
+```
 23 is prime
 ```
 
@@ -419,9 +423,14 @@ else: # Нормальное завершение цикла
 
 Когда интерпретатор выполняет цикл for, он поочередно, один за другим, присваивает элементы объекта последовательности переменной цикла и выполняет тело цикла для каждого из них. Для обращения к текущему элементу последовательности в теле цикла обычно используется переменная цикла, как если бы это был курсор, шагающий от элемента к элементу. Имя (target), используемое в качестве переменной цикла (возможно, новой), которое указывается в заголовке цикла for, обычно находится в области видимости, где располагается сама инструкция for. Хотя она может быть изменена в теле цикла, тем не менее ей автоматически будет присвоен следующий элемент последовательности, когда управление вернется в начало цикла. После выхода из цикла эта переменная обычно все еще ссылается на последний элемент последовательности, если цикл не был завершен инструкцией break.
 
-```
+```python
 for x in ['spam', 'eggs', 'ham']:
     print(type(x))
+```
+
+Вывод:
+
+```
 <class 'str'>
 <class 'str'>
 <class 'str'>
